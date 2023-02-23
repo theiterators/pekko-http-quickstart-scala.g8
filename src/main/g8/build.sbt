@@ -10,8 +10,8 @@ lazy val root = (project in file(".")).settings(
   inThisBuild(List(organization := "$organization$", scalaVersion := "$scala_version$")),
   name := "$name$",
   libraryDependencies ++= {
-    val pekkoV     = "0.0.0+26592-864ee821-SNAPSHOT"
-    val pekkoHttpV = "0.0.0+4295-b475736f-SNAPSHOT"
+    val pekkoV     = "$pekko_version$"
+    val pekkoHttpV = "$pekko_http_version$"
     val logbackV   = "1.4.5"
     val scalatestV = "3.2.15"
     Seq(
