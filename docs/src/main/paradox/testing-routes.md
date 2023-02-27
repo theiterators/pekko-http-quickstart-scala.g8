@@ -74,7 +74,7 @@ why it's so convenient to extend the Routes trait when testing it - everything t
 our disposal when writing the test.
 
 This concludes the basics of unit testing HTTP routes, to learn more please refer to the 
-[Pekko HTTP TestKit documentation]().
+@extref[Pekko HTTP TestKit documentation](pekko.http:/routing-dsl/testkit.html).
 
 ### Complete unit test code listing
 

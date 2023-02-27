@@ -3,6 +3,8 @@ IntelliJ IDEA
 
 [IntelliJ IDEA](https://www.jetbrains.com/idea/) from JetBrains is one of the leading IDEs in the Java/Scala community, and it has excellent support for Pekko HTTP. This section of the tutorial describes how to set up, test and run the sample project in IntelliJ.
 
+Refer also to the external instructions from the [JetBrains documentation](https://www.jetbrains.com/help/idea/sbt-support.html#import_sbt)
+
 ## Setting up the project
 
 To add the Pekko HTTP example project to IntelliJ, follow these steps:
@@ -31,7 +33,7 @@ In the **Project** pane, right click the `QuickstartApp` source file. Select **R
 
 ![Running Project](images/idea-running-project.png)
 
-Alternatively, you can run the project through `sbt` as described in the index page of the guide.
+Alternatively, you can run the project through `sbt` as described in the [index page](index.html) of the guide.
 
 ## Tutorial done!
 

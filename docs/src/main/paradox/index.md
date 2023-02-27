@@ -24,9 +24,10 @@ You can run the Pekko HTTP example project on Linux, MacOS, or Windows. The only
 Use [Giter8](http://www.foundweekends.org/giter8/) to download an example. There are two ways you can achieve that.
 
 Prerequisites:
-- JDK 11
-- sbt 1.4.x or higher
-- [Giter8](http://www.foundweekends.org/giter8/setup.html) (the second way only)
+
+* JDK 11
+* sbt 1.4.x or higher
+* [Giter8](http://www.foundweekends.org/giter8/setup.html) (the second way only)
 
 (Without cloning the repo) open a console and run one of the following two commands:
  ```
@@ -38,11 +39,12 @@ g8 theiterators/pekko-http-quickstart-scala.g8
 ```
 
 This template will prompt for the following parameters. Press `Enter` if the default values suit you:
-- `name`: Becomes the name of the project.
-- `scala_version`: Specifies the Scala version for this project.
-- `pekko_version`: Specifies which version of Pekko should be used for this project.
-- `pekko_http_version`: Specifies which version of Pekko HTTP should be used for this project.
-- `organization`: Specifies the organization for this project.
+
+* `name`: Becomes the name of the project.
+* `scala_version`: Specifies the Scala version for this project.
+* `pekko_version`: Specifies which version of Pekko should be used for this project.
+* `pekko_http_version`: Specifies which version of Pekko HTTP should be used for this project.
+* `organization`: Specifies the organization for this project.
 
 ## Running the example
 
@@ -95,9 +97,6 @@ You pass request parameters in JSON format. While you could do this in a browser
 * Browser add-ons such as [RESTClient](http://restclient.net/) for Firefox or Postman for Chrome.
 
 Follow the steps appropriate for your tool:
-
-* [cURL commands](#cURL-commands)
-* [Browser-based tools](#Browser-based-tools)
 
 ### cURL commands
 
