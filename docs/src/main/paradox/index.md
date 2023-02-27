@@ -26,7 +26,7 @@ The Pekko HTTP example for Scala is a zipped project that includes a distributio
 1. Download the project [zip file](https://example.lightbend.com/v1/download/pekko-http-quickstart-scala?name=pekko-http-quickstart-scala).
 2. Extract the zip file to a convenient location:
 
-* On Linux and MacOS systems, open a terminal and use the command `unzip` pekko-quickstart-scala.zip. Note: On OSX, if you unzip using Archiver, you also have to make the sbt files executable by entering the following two commands:
+* On Linux and MacOS systems, open a terminal and use the command `unzip pekko-quickstart-scala.zip`. Note: On OSX, if you unzip using Archiver, you also have to make the sbt files executable by entering the following two commands:
 
 ```
 $ chmod u+x ./sbt

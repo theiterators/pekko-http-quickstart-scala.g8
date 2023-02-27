@@ -5,7 +5,7 @@ IntelliJ IDEA
 
 ## Setting up the project
 
-To add the pekko HTTP example project to IntelliJ, follow these steps:
+To add the Pekko HTTP example project to IntelliJ, follow these steps:
 
 1. Open IntelliJ.
 2. Select **Open** from the Welcome dialog or **File &gt; Open** from the Editor.
@@ -33,4 +33,4 @@ In the **Project** pane, right click the `QuickstartApp` source file. Select **R
 
 ## Tutorial done!
 
-Congratulations! You can start building real-world applications that use pekko HTTP. Of course, we didn't have time to cover all pekko HTTP features in this short guide. See the @extref[documentation](pekko.http:scala/http/index.html) to learn more.
+Congratulations! You can start building real-world applications that use Pekko HTTP. Of course, we didn't have time to cover all Pekko HTTP features in this short guide. See the @extref[documentation](pekko.http:scala/http/index.html) to learn more.

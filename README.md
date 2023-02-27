@@ -43,7 +43,7 @@ sbt run
 Template license
 ----------------
 Written in 2017 by Lightbend, Inc.
-Migrated to pekko in 2023 by Iterators sp. z o.o.
+Migrated to Pekko in 2023 by Iterators sp. z o.o.
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
 and neighboring rights to this template to the public domain worldwide.
