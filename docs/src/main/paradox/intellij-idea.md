@@ -1,7 +1,7 @@
 IntelliJ IDEA
 -------------
 
-[IntelliJ IDEA](https://www.jetbrains.com/idea/) from JetBrains is one of the leading IDEs in the Java/Scala community, and it has excellent support for pekko HTTP. This section of the tutorial describes how to set up, test and run the sample project in IntelliJ.
+[IntelliJ IDEA](https://www.jetbrains.com/idea/) from JetBrains is one of the leading IDEs in the Java/Scala community, and it has excellent support for Pekko HTTP. This section of the tutorial describes how to set up, test and run the sample project in IntelliJ.
 
 ## Setting up the project
 
@@ -30,6 +30,8 @@ Voila the lines are gone!
 In the **Project** pane, right click the `QuickstartApp` source file. Select **Run 'QuickstartApp'**. The output should look like the output in the shell:
 
 ![Running Project](images/idea-running-project.png)
+
+Alternatively, you can run the project through `sbt` as described in the index page of the guide.
 
 ## Tutorial done!
 

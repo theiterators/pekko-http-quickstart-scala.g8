@@ -21,19 +21,28 @@ You can run the Pekko HTTP example project on Linux, MacOS, or Windows. The only
 
 ## Downloading the example
 
-The Pekko HTTP example for Scala is a zipped project that includes a distribution of the [sbt](http://www.scala-sbt.org) build tool. Download and unzip the example as follows:
+Use [Giter8](http://www.foundweekends.org/giter8/) to download an example. There are two ways you can achieve that.
 
-1. Download the project [zip file](https://example.lightbend.com/v1/download/pekko-http-quickstart-scala?name=pekko-http-quickstart-scala).
-2. Extract the zip file to a convenient location:
+Prerequisites:
+- JDK 11
+- sbt 1.4.x or higher
+- [Giter8](http://www.foundweekends.org/giter8/setup.html) (the second way only)
 
-* On Linux and MacOS systems, open a terminal and use the command `unzip pekko-quickstart-scala.zip`. Note: On OSX, if you unzip using Archiver, you also have to make the sbt files executable by entering the following two commands:
-
+(Without cloning the repo) open a console and run one of the following two commands:
+ ```
+sbt new theiterators/pekko-http-quickstart-scala.g8
+ ```
+or
 ```
-$ chmod u+x ./sbt
-$ chmod u+x ./sbt-dist/bin/sbt
+g8 theiterators/pekko-http-quickstart-scala.g8
 ```
 
-* On Windows, use a tool such as File Explorer to extract the project.
+This template will prompt for the following parameters. Press `Enter` if the default values suit you:
+- `name`: Becomes the name of the project.
+- `scala_version`: Specifies the Scala version for this project.
+- `pekko_version`: Specifies which version of Pekko should be used for this project.
+- `pekko_http_version`: Specifies which version of Pekko HTTP should be used for this project.
+- `organization`: Specifies the organization for this project.
 
 ## Running the example
 
