@@ -30,7 +30,7 @@ While we used Spray JSON in this example, various other libraries are supported 
 project, including [Jackson](https://github.com/FasterXML/jackson), [Play JSON](https://www.playframework.com/documentation/2.6.x/ScalaJson) 
 or [circe](https://circe.github.io/circe/).
 
-Each library comes with different trade-offs in performance and user-friendlieness. Spray JSON is generally the fastest, though it requires you to write the format values explicitly. If you'd rather make "everything" automatically marshallable into JSON values you might want to use Jackson or Circe instead. 
+Each library comes with different trade-offs in performance and user-friendliness. Spray JSON is generally the fastest, though it requires you to write the format values explicitly. If you'd rather make "everything" automatically marshallable into JSON values you might want to use Jackson or Circe instead. 
 
 If you're not sure, we recommend sticking to Spray JSON as it's the closest in philosophy to Pekko HTTP - being explicit about all capabilities.
   

@@ -23,7 +23,7 @@ If you're using Specs2 instead, you can simply extend the `Specs2RouteTest` supp
 
 @@@
 
-Next we'll need to bring into the test class our routes that we want to test. We're doing this by creating an instance of the `UserRoutes` and importing the marshallers from `JsonFormats` into scope for the tests to use, as well as makes it possible to implement all abstract members of that trait in the test itself - all in in a fully type-safe way.
+Next we'll need to bring into the test class our routes that we want to test. We're doing this by creating an instance of the `UserRoutes` and importing the marshallers from `JsonFormats` into scope for the tests to use, as well as makes it possible to implement all abstract members of that trait in the test itself - all in a fully type-safe way.
 
 We'll want to use the Pekko `ActorTestKit` however the `ScalaRouteTest` only knows of the "classic" `ActorSystem` so we need 
 to provide a small adapter allowing us to combine both. 
@@ -33,7 +33,7 @@ Next we need to have a `ActorRef[UserRegistry.Command]` available that that our 
 @@snip [QuickstartServer.scala]($g8srctest$/scala/$package$/UserRoutesSpec.scala) { #set-up }
 
 We could create an actor that replies with a mocked response here instead if we wanted to, this is especially useful if
-the route awaits an response from the actor before rendering the `HttpResponse` to the client. Read about the @extref[Pekko TestKit](pekko:testing.html) and it's utilities like `TestProbe` if this is something you'd like to learn more about. 
+the route awaits a response from the actor before rendering the `HttpResponse` to the client. Read about the @extref[Pekko TestKit](pekko:testing.html) and it's utilities like `TestProbe` if this is something you'd like to learn more about. 
 
 Let's write our first test, in which we'll hit the `/users` endpoint with a `GET` request:
 

@@ -8,7 +8,7 @@ behavior which bootstraps all actors and other dependencies (database connection
 @@snip [QuickstartApp.scala]($g8src$/scala/$package$/QuickstartApp.scala) { #main-class }
 
 Notice that we've separated out the `UserRoutes` class, in which we'll put all our actual route definitions.
-This is a good pattern to follow, especially once your application starts to grow and you'll need some form of 
+This is a good pattern to follow, especially once your application starts to grow, and you'll need some form of 
 compartmentalizing them into groups of routes handling specific parts of the exposed API.
 
 ## Binding endpoints
@@ -24,7 +24,7 @@ Each Pekko HTTP `Route` contains one or more `pekko.http.scaladsl.server.Directi
 
 In our app the definition of the `Route` is separated out into the class `UserRoutes` and available through the field `userRoutes`.
 
-In larger applications we'd define separate subsystems in different places and then combine combine the various routes of our 
+In larger applications we'd define separate subsystems in different places and then combine the various routes of our 
 application into a big using the concat directive like this: `val route = concat(UserRoutes.userRoutes, healthCheckRoutes, ...)`
 
 Let's look at the pieces of the example `Route` that bind the endpoints, HTTP methods, and message or payload for each action.
@@ -35,7 +35,7 @@ The definition of the endpoint to retrieve and create users look like the follow
 
 @@snip [UserRoutes.scala]($g8src$/scala/$package$/UserRoutes.scala) { #users-get-post }
 
-A Route is constructed by nesting various *directives* which route an incoming request to the apropriate handler block.
+A Route is constructed by nesting various *directives* which route an incoming request to the appropriate handler block.
 Note the following building blocks from the snippet:
 
 **Generic functionality**
@@ -46,7 +46,7 @@ The following directives are used in the above example:
 * `pathEnd` : used on an inner-level to discriminate “path already fully matched” from other alternatives. Will, in this case, match on the "users" path.
 * `concat`: concatenates two or more route alternatives. Routes are attempted one after another. If a route rejects a request, the next route in the chain is attempted. This continues until a route in the chain produces a response. If all route alternatives reject the request, the concatenated route rejects the route as well. In that case, route alternatives on the next higher level are attempted. If the root level route rejects the request as well, then an error response is returned that contains information about why the request was rejected.
     * This can also be achieved using the `~` operator, like this: `exampleRoute ~ anotherRoute`. 
-    However this method is slightly more error-prone since forgetting to add the `~` between routes in subsequent lines 
+    However, this method is slightly more error-prone since forgetting to add the `~` between routes in subsequent lines 
     will not result in a compile error (as it would when using the `concat` directive) resulting in only the "last" route to be returned. <br/>
     <br/>
     In short other words: you may see the `~` operator used in Pekko HTTP apps, however it is recommended to use the `concat` directive as safer alternative. 
@@ -87,7 +87,7 @@ Let's break down the logic handling the incoming request:
 
 @@snip [UserRoutes.scala]($g8src$/scala/$package$/UserRoutes.scala) { #retrieve-user-info }
 
-The `rejectEmptyResponse` here above is a convenience method that automatically unwraps a future, handles an `Option` by converting `Some` into a successful response, returns a HTTP status code 404 for `None`, and passes on to the `ExceptionHandler` in case of an error, which returns the HTTP status code 500 by default.
+The `rejectEmptyResponse` here above is a convenience method that automatically unwraps a future, handles an `Option` by converting `Some` into a successful response, returns an HTTP status code 404 for `None`, and passes on to the `ExceptionHandler` in case of an error, which returns the HTTP status code 500 by default.
 
 **Deleting a user**
 
@@ -111,7 +111,7 @@ value - allowing for separation of concerns and get smaller routing trees.
 
 ## Binding the HTTP server
 
-Binding the `Route` to a HTTP server on a TCP port is done from the root behavior actor on startup through the separate method 
+Binding the `Route` to an HTTP server on a TCP port is done from the root behavior actor on startup through the separate method 
 `startHttpServer`, we have introduced it to avoid accidentally accessing internal state of the bootstrap actor.
 
 The `bindAndhandle` method that does the actual binding takes three parameters; `routes`, the hostname, and the port.
@@ -124,7 +124,7 @@ To make sure our application stops if it cannot bind we terminate the actor syst
 
 In `QuickstartApp.scala`, you will also find the code that ties everything together by starting the various actors in a 
 root behavior. By watching the user registry actor and not handling the `Terminated` message we make sure that if
- it stops or craches the root behavior crashes and stops the `ActorSystem` itself. 
+ it stops or crashes the root behavior crashes and stops the `ActorSystem` itself. 
 
 @@snip [QuickstartApp.scala]($g8src$/scala/$package$/QuickstartApp.scala) { #main-class }
 
