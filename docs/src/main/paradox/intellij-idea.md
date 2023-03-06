@@ -25,7 +25,7 @@ The main source file contains comments with special directives used by the docum
 4. Check **Regex**.
 5. Click **Replace**.
 
-Voila the lines are gone!
+Voilà the lines are gone!
 
 ## Running the application
 

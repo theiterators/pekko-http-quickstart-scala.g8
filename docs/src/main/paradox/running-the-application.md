@@ -9,22 +9,25 @@ When you ran the example for the first time, you were able to create and retriev
 
 To test this functionality, follow these steps. If you need reminders on starting the app or sending requests, refer to the @ref:[instructions](index.md#exercising-the-example) in the beginning.
 
-`1.` If the Pekko HTTP server is still running, stop and restart it.
-`2.` With no users registered, use your tool of choice to:
-`3.` Retrieve a list of users. Hint: use the `GET` method and append `/users` to the URL.
+1. If the Pekko HTTP server is still running, stop and restart it.
 
-You should get back an empty list: `{"users":[]}`
+2. With no users registered, use your tool of choice to:
 
-`4.` Try to retrieve a single user named `MrX`. Hint: use the `GET` method and append `users/MrX` to the URL.
+3. Retrieve a list of users. Hint: use the `GET` method and append `/users` to the URL.
 
-You should get back the message: `User MrX is not registered.`
+    - You should get back an empty list: `{"users":[]}`
 
-`5.` Try adding one or more users. Hint: use the `POST` method, append `/users` to the URL, and format the data in JSON, similar to: `{"name":"MrX","age":31,"countryOfResidence":"Canada"}`
+4. Try to retrieve a single user named `MrX`. Hint: use the `GET` method and append `users/MrX` to the URL.
 
-You should get back the message: `User MrX created.`
+    - You should get back the message: `User MrX is not registered.`
 
-`6.` Try deleting a user you just added. Hint: use the `DELETE`, and append `/users/<NAME>` to the URL.
+5. Try adding one or more users. Hint: use the `POST` method, append `/users` to the URL, and format the data in JSON, similar to: `{"name":"MrX","age":31,"countryOfResidence":"Canada"}`
 
-You should get back the message: `User MrX deleted.`
+    - You should get back the message: `User MrX created.`
 
-Now that you've confirmed all of the example functionality, see how simple it is to integrate the project into an IDE.
+6. Try deleting a user you just added. Hint: use the `DELETE`, and append `/users/<NAME>` to the URL.
+
+    - You should get back the message: `User MrX deleted.`
+
+
+Let's now proceed to testing our application.
